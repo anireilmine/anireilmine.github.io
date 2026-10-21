@@ -1,64 +1,77 @@
-// Интерактивность первой версии сайта «Лагерь».
-// Здесь намеренно используются обычный JavaScript и небольшие функции без библиотек.
+// Настрой ссылки, когда игровой сервер будет готов.
+const SERVER_ADDRESS = "";
+const COMMUNITY_INVITE_URL = "";
 
-const menuToggle = document.querySelector(".menu-toggle");
-const primaryNav = document.querySelector(".primary-nav");
-const navLinks = document.querySelectorAll(".primary-nav a");
-const filterButtons = document.querySelectorAll(".filter-button");
-const eventCards = document.querySelectorAll(".event-card");
-const joinButton = document.querySelector("#join-button");
+const menuToggle = document.querySelector("#menu-toggle");
+const primaryNav = document.querySelector("#primary-nav");
 const toast = document.querySelector("#toast");
+const joinButton = document.querySelector("#join-button");
+const footerYear = document.querySelector("#footer-year");
 
-let toastTimer;
+let toastTimeout;
 
-function showMessage(message) {
+if (footerYear) {
+  footerYear.textContent = new Date().getFullYear();
+}
+
+function showToast(message) {
+  if (!toast) return;
+
   toast.textContent = message;
   toast.classList.add("is-visible");
-
-  window.clearTimeout(toastTimer);
-  toastTimer = window.setTimeout(() => {
+  window.clearTimeout(toastTimeout);
+  toastTimeout = window.setTimeout(() => {
     toast.classList.remove("is-visible");
   }, 3200);
 }
 
-// Открывает и закрывает мобильную навигацию.
-menuToggle.addEventListener("click", () => {
-  const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-  menuToggle.setAttribute("aria-expanded", String(!isOpen));
-  menuToggle.setAttribute("aria-label", isOpen ? "Открыть меню" : "Закрыть меню");
-  primaryNav.classList.toggle("is-open", !isOpen);
-});
-
-// После выбора раздела на телефоне закрываем выпадающее меню.
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Открыть меню");
-    primaryNav.classList.remove("is-open");
+if (menuToggle && primaryNav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Открыть меню" : "Закрыть меню");
+    primaryNav.classList.toggle("is-open", !isOpen);
   });
-});
 
-// Фильтр показывает все события или только выбранную категорию.
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const selectedFilter = button.dataset.filter;
-
-    filterButtons.forEach((item) => {
-      const isSelected = item === button;
-      item.classList.toggle("is-active", isSelected);
-      item.setAttribute("aria-pressed", String(isSelected));
-    });
-
-    eventCards.forEach((card) => {
-      const shouldShow = selectedFilter === "all" || card.dataset.category === selectedFilter;
-      card.classList.toggle("is-hidden", !shouldShow);
+  primaryNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Открыть меню");
+      primaryNav.classList.remove("is-open");
     });
   });
-});
 
-// Пока у сообщества нет настоящей ссылки-приглашения, объясняем это вместо перехода на фальшивый адрес.
-joinButton.addEventListener("click", () => {
-  showMessage("Добавим сюда настоящую ссылку-приглашение, когда определимся с платформой сервера.");
-});
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Открыть меню");
+      primaryNav.classList.remove("is-open");
+    }
+  });
+}
 
-// Здесь позже можно подключить реальный сервер, API и данные сообщества.
+if (joinButton) {
+  joinButton.addEventListener("click", async () => {
+    if (COMMUNITY_INVITE_URL) {
+      window.open(COMMUNITY_INVITE_URL, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    if (SERVER_ADDRESS && navigator.clipboard && window.isSecureContext) {
+      try {
+        await navigator.clipboard.writeText(SERVER_ADDRESS);
+        showToast("Адрес сервера скопирован. До встречи в мире!");
+        return;
+      } catch (error) {
+        // The fallback message below still tells the visitor what is missing.
+      }
+    }
+
+    showToast("Скоро здесь появятся адрес сервера и приглашение в сообщество.");
+  });
+}
+
+// 3D blocks are decorative. Pause their motion when a visitor prefers reduced motion.
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  document.documentElement.classList.add("reduce-motion");
+}
