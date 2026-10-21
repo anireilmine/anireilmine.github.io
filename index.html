@@ -4,158 +4,154 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#111812">
-  <meta name="description" content="Лагерь — игровое сообщество, где важны люди, совместные игры и хорошие истории.">
+  <meta name="description" content="Лагерь — уютное Minecraft-сообщество, где мир строится вместе, а истории создаются игроками.">
   <title>Лагерь — место своих</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
 </head>
 <body>
-  <div class="site-shell">
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Лагерь — на главную">
-        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-        <span class="brand-name">лагерь<span class="brand-period">.</span></span>
-      </a>
+  <div class="page-noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Лагерь — на главную">
+      <span class="brand-icon" aria-hidden="true">
+        <span class="brand-icon-top"></span><span class="brand-icon-front"></span><span class="brand-icon-side"></span>
+      </span>
+      <span class="brand-name">лагерь<span>.</span></span>
+    </a>
 
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Открыть меню">
-        <span></span><span></span>
-      </button>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Открыть меню">
+      <span></span><span></span>
+    </button>
 
-      <nav class="primary-nav" id="primary-nav" aria-label="Главная навигация">
-        <a href="#about">О сообществе</a>
-        <a href="#events">События</a>
-        <a href="#board">Доска лагеря</a>
-      </nav>
+    <nav class="primary-nav" id="primary-nav" aria-label="Основная навигация">
+      <a href="#world">О мире</a>
+      <a href="#community">Наш подход</a>
+      <a href="#join">Как попасть</a>
+    </nav>
 
-      <a class="header-cta" href="#join">Зайти к нам <span aria-hidden="true">↗</span></a>
-    </header>
+    <a class="header-link" href="#join">Зайти в мир <span aria-hidden="true">↗</span></a>
+  </header>
 
-    <main id="top">
-      <section class="hero section-wrap" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <div class="eyebrow"><span class="eyebrow-dot"></span> ИГРОВОЕ СООБЩЕСТВО · НАЧИНАЕТСЯ С ЛЮДЕЙ</div>
-          <h1 id="hero-title">Не просто сервер.<br><span>Место своих.</span></h1>
-          <p class="hero-description">Заходят поиграть. Остаются ради людей. Здесь собираются на вечерние вылазки, строят что-то большое и создают истории, которые потом вспоминают неделями.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#join">Найти свою компанию <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="#about">Почувствовать атмосферу <span aria-hidden="true">↓</span></a>
-          </div>
-          <div class="hero-note"><span class="note-line"></span><span>Можно прийти одному. Это нормально.</span></div>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> MINECRAFT COMMUNITY <span class="eyebrow-divider">/</span> МИР СВОИХ</p>
+        <h1 id="hero-title">Мир, в который<br>хочется <span>возвращаться.</span></h1>
+        <p class="hero-description">Здесь строят не только дома. Здесь находят напарников, придумывают безумные проекты и создают истории, которые хочется продолжать.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#join">Найти своё место <span aria-hidden="true">↗</span></a>
+          <a class="button button-quiet" href="#world">Исследовать мир <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-note">
+          <div class="player-stack" aria-hidden="true"><span>✦</span><span>◆</span><span>✳</span></div>
+          <p><strong>Можно прийти одному.</strong><br>Остальное построим вместе.</p>
+        </div>
+      </div>
+
+      <div class="world-art" role="img" aria-label="Ночной пиксельный мир Minecraft: холмы, деревья и парящие блоки">
+        <div class="art-sky"></div>
+        <div class="art-stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="pixel-moon" aria-hidden="true"></div>
+        <div class="art-cloud cloud-a" aria-hidden="true"></div>
+        <div class="art-cloud cloud-b" aria-hidden="true"></div>
+        <div class="art-label"><span class="label-square"></span><span>ЛАГЕРЬ / СЕЗОН 01</span></div>
+
+        <div class="mountain mountain-back" aria-hidden="true"></div>
+        <div class="mountain mountain-mid" aria-hidden="true"></div>
+        <div class="mountain mountain-front" aria-hidden="true"></div>
+        <div class="block-tree tree-one" aria-hidden="true"><span></span><i></i><b></b></div>
+        <div class="block-tree tree-two" aria-hidden="true"><span></span><i></i><b></b></div>
+        <div class="block-tree tree-three" aria-hidden="true"><span></span><i></i><b></b></div>
+        <div class="ground ground-back" aria-hidden="true"></div>
+        <div class="ground ground-front" aria-hidden="true"></div>
+        <div class="path-block path-one" aria-hidden="true"></div>
+        <div class="path-block path-two" aria-hidden="true"></div>
+        <div class="path-block path-three" aria-hidden="true"></div>
+
+        <div class="floating-cube cube-grass cube-large" aria-hidden="true">
+          <span class="cube-face cube-top"></span><span class="cube-face cube-front"></span><span class="cube-face cube-right"></span>
+        </div>
+        <div class="floating-cube cube-stone cube-small" aria-hidden="true">
+          <span class="cube-face cube-top"></span><span class="cube-face cube-front"></span><span class="cube-face cube-right"></span>
+        </div>
+        <div class="floating-cube cube-diamond cube-tiny" aria-hidden="true">
+          <span class="cube-face cube-top"></span><span class="cube-face cube-front"></span><span class="cube-face cube-right"></span>
+        </div>
+        <div class="floating-cube cube-dirt cube-medium" aria-hidden="true">
+          <span class="cube-face cube-top"></span><span class="cube-face cube-front"></span><span class="cube-face cube-right"></span>
         </div>
 
-        <div class="hero-art" aria-label="Иллюстрация уютного игрового лагеря">
-          <div class="art-orbit orbit-one"></div>
-          <div class="art-orbit orbit-two"></div>
-          <div class="moon"></div>
-          <div class="art-label label-top"><span class="label-dot"></span> ПОСЛЕ ЗАКАТА</div>
-          <div class="pixel-scene">
-            <div class="cloud cloud-one"></div>
-            <div class="cloud cloud-two"></div>
-            <div class="mountain mountain-back"></div>
-            <div class="mountain mountain-front"></div>
-            <div class="pine pine-one"><i></i><b></b></div>
-            <div class="pine pine-two"><i></i><b></b></div>
-            <div class="pine pine-three"><i></i><b></b></div>
-            <div class="camp-ground"></div>
-            <div class="tent tent-back"></div>
-            <div class="tent"><span></span></div>
-            <div class="fire"><i></i><b></b><span></span></div>
-            <div class="spark spark-one"></div><div class="spark spark-two"></div><div class="spark spark-three"></div>
-          </div>
-          <div class="art-caption"><span class="caption-index">01 / 03</span><span>Один вечер может стать началом дружбы.</span></div>
-          <div class="floating-tag tag-left"><span class="tag-symbol">+</span><span>Собираемся<br>без повода</span></div>
-          <div class="floating-tag tag-right"><span class="tiny-avatars"><i>А</i><i>М</i><i>К</i></span><span>Свои уже<br>где-то рядом</span></div>
-        </div>
-      </section>
+        <div class="art-caption"><span>ТИХИЙ ВЕЧЕР · НОВЫЕ ИСТОРИИ</span><span class="caption-coordinates">X: 128 / Z: 64</span></div>
+      </div>
 
-      <section class="community-strip section-wrap" aria-label="О сообществе в цифрах">
-        <div class="strip-intro"><span class="strip-star">*</span><span>НЕ ПРО ОНЛАЙН-РЕКОРДЫ.<br>ПРО ОБЩИЕ МОМЕНТЫ.</span></div>
-        <div class="strip-stat"><strong>01</strong><span>Общее место,<br>куда можно вернуться</span></div>
-        <div class="strip-stat"><strong>∞</strong><span>Идей, которые<br>можно воплотить вместе</span></div>
-        <div class="strip-stat"><strong>YOU</strong><span>Следующая история<br>может быть твоей</span></div>
-      </section>
+      <div class="hero-bottomline" aria-hidden="true"><span>ИГРАЕМ</span><i></i><span>СТРОИМ</span><i></i><span>ОСТАЁМСЯ</span></div>
+    </section>
 
-      <section class="about-section section-wrap" id="about">
-        <div class="section-heading">
-          <div><p class="eyebrow">КАК МЫ УСТРОЕНЫ</p><h2>Хорошая игра — это<br><span>хорошие люди.</span></h2></div>
-          <p class="section-lead">Не нужно быть самым опытным игроком или знать всех с первого дня. Достаточно интереса к игре и желания быть частью команды.</p>
-        </div>
-        <div class="values-grid">
-          <article class="value-card value-card-featured">
-            <div class="value-topline"><span>01 / ВМЕСТЕ</span><span class="value-glyph glyph-sun">*</span></div>
-            <div class="value-illustration illustration-camp"><div class="mini-hill hill-a"></div><div class="mini-hill hill-b"></div><div class="mini-tent"></div><div class="mini-fire"></div></div>
-            <h3>Собираемся, а не соревнуемся</h3>
-            <p>Совместные вылазки, большие постройки и спонтанные идеи. Победа приятна, но атмосфера важнее таблицы лидеров.</p>
-          </article>
-          <article class="value-card">
-            <div class="value-topline"><span>02 / УЧАСТИЕ</span><span class="value-glyph glyph-flower">+</span></div>
-            <div class="value-illustration illustration-notes"><div class="note note-one">построить маяк</div><div class="note note-two">вечер мини-игр</div><div class="note note-three">общий скриншот</div></div>
-            <h3>Есть место твоим идеям</h3>
-            <p>Предлагай события, делись находками, помогай развивать мир. Сообщество создают сами участники.</p>
-          </article>
-          <article class="value-card">
-            <div class="value-topline"><span>03 / ЗНАКОМСТВО</span><span class="value-glyph glyph-heart">○</span></div>
-            <div class="value-illustration illustration-people"><span class="person person-a">А</span><span class="person person-b">М</span><span class="person person-c">Т</span><span class="person person-d">К</span><div class="people-line"></div></div>
-            <h3>Не остаёшься новичком</h3>
-            <p>Подскажем, что к чему, познакомим с ребятами и поможем найти компанию для первой совместной игры.</p>
-          </article>
-        </div>
-      </section>
+    <section class="world-section section-wrap" id="world" aria-labelledby="world-title">
+      <div class="section-intro">
+        <p class="eyebrow">НЕ ПРОСТО КАРТА</p>
+        <h2 id="world-title">У каждого здесь<br>есть <span>своя история.</span></h2>
+      </div>
+      <p class="section-description">Кто-то строит город века. Кто-то уходит за ресурсами и возвращается через три часа с десятью историями. А кто-то просто приходит поболтать у дома.</p>
+      <div class="world-points">
+        <article class="world-point">
+          <span class="point-index">01</span>
+          <div><h3>Строим вместе</h3><p>Общие базы, большие проекты и помощь без лишних вопросов.</p></div>
+          <span class="point-symbol" aria-hidden="true">▧</span>
+        </article>
+        <article class="world-point">
+          <span class="point-index">02</span>
+          <div><h3>Исследуем своё</h3><p>Вылазки, открытия и случайные приключения по дороге домой.</p></div>
+          <span class="point-symbol" aria-hidden="true">⌁</span>
+        </article>
+        <article class="world-point">
+          <span class="point-index">03</span>
+          <div><h3>Помним людей</h3><p>У мира есть смысл, когда за постройками стоят игроки и их истории.</p></div>
+          <span class="point-symbol" aria-hidden="true">✳</span>
+        </article>
+      </div>
+    </section>
 
-      <section class="events-section section-wrap" id="events">
-        <div class="section-heading events-heading">
-          <div><p class="eyebrow">ПЛАНЫ НА БЛИЖАЙШЕЕ</p><h2>Поводы <span>собраться.</span></h2></div>
-          <div class="event-filter" role="group" aria-label="Фильтр событий">
-            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Все</button>
-            <button class="filter-button" type="button" data-filter="game" aria-pressed="false">Игры</button>
-            <button class="filter-button" type="button" data-filter="chill" aria-pressed="false">Без спешки</button>
-          </div>
+    <section class="join-section" id="community" aria-labelledby="community-title">
+      <div class="join-inner section-wrap">
+        <div class="join-copy">
+          <p class="eyebrow">НАШЕ НЕБОЛЬШОЕ ПРАВИЛО</p>
+          <h2 id="community-title">Сначала люди.<br><span>Потом всё остальное.</span></h2>
+          <p>Не нужно быть профи, иметь готовую команду или знать всех заранее. Достаточно любопытства и желания стать частью общего мира.</p>
         </div>
-        <div class="event-grid" id="event-grid">
-          <article class="event-card event-card-main" data-category="game">
-            <div class="event-art event-art-build"><span class="event-art-sticker">ВМЕСТЕ ЛУЧШЕ</span><div class="block-world"><i></i><b></b><span></span><em></em></div></div>
-            <div class="event-content"><div class="event-meta"><span>СОВМЕСТНАЯ ИГРА</span><span class="event-status">ИДЕЯ НА ОБСУЖДЕНИЕ</span></div><h3>Большая постройка выходного дня</h3><p>Выбираем место, делим задачи и строим что-то, на что в одиночку никогда не хватило бы терпения.</p><a href="#join" class="event-link">Предложить дату <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="event-card" data-category="chill">
-            <div class="event-art event-art-night"><div class="night-moon"></div><div class="night-hill"></div><div class="night-hill night-hill-two"></div><span class="night-star star-a"></span><span class="night-star star-b"></span><span class="night-star star-c"></span></div>
-            <div class="event-content"><div class="event-meta"><span>ОТДЫХ</span><span class="event-status">ИДЕЯ НА ОБСУЖДЕНИЕ</span></div><h3>Вечер без плана</h3><p>Никаких заданий и дедлайнов. Просто зайти, поболтать и посмотреть, куда заведёт вечер.</p><a href="#join" class="event-link">Я бы пришёл <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="event-card" data-category="game">
-            <div class="event-art event-art-treasure"><div class="treasure-sun"></div><div class="treasure-box"><i></i></div><span class="treasure-spark spark-a">+</span><span class="treasure-spark spark-b">+</span></div>
-            <div class="event-content"><div class="event-meta"><span>ИССЛЕДОВАНИЕ</span><span class="event-status">ИДЕЯ НА ОБСУЖДЕНИЕ</span></div><h3>Карта, на которую никто не ходил</h3><p>Собираемся небольшой группой и исследуем новые места. Маршрут придумаем все вместе.</p><a href="#join" class="event-link">Вписаться в идею <span aria-hidden="true">↗</span></a></div>
-          </article>
+        <div class="join-block-illustration" aria-hidden="true">
+          <div class="mini-block mini-grass"><i></i><b></b><span></span></div>
+          <div class="mini-block mini-stone"><i></i><b></b><span></span></div>
+          <div class="mini-block mini-wood"><i></i><b></b><span></span></div>
+          <div class="join-spark spark-one"></div><div class="join-spark spark-two"></div><div class="join-spark spark-three"></div>
         </div>
-        <p class="events-disclaimer">События сейчас демонстрационные. В реальной версии здесь будут планы и даты вашего сообщества.</p>
-      </section>
+      </div>
+    </section>
 
-      <section class="board-section section-wrap" id="board">
-        <div class="board-copy"><p class="eyebrow">ДОСКА ЛАГЕРЯ</p><h2>Что нового<br><span>у своих?</span></h2><p>Небольшая лента для новостей, смешных историй и важных мелочей. Не поток уведомлений — только то, чем хочется поделиться.</p><a class="text-link" href="#join">Хочу рассказать свою историю <span aria-hidden="true">↗</span></a></div>
-        <div class="board-list">
-          <article class="board-item"><div class="board-icon board-icon-green">01</div><div class="board-item-copy"><div class="board-meta"><span>ИДЕЯ СООБЩЕСТВА</span><span>ДЛЯ ПРИМЕРА</span></div><h3>А что, если построить общий город?</h3><p>Домики в одном стиле, площадь, рынок и места для встреч. И у каждого — свой кусочек проекта.</p></div><span class="board-arrow" aria-hidden="true">↗</span></article>
-          <article class="board-item"><div class="board-icon board-icon-orange">02</div><div class="board-item-copy"><div class="board-meta"><span>ЗНАКОМСТВО</span><span>ДЛЯ ПРИМЕРА</span></div><h3>Новая неделя — хороший повод зайти</h3><p>Если давно хотел присоединиться, но откладывал, можно начать с обычного «всем привет».</p></div><span class="board-arrow" aria-hidden="true">↗</span></article>
-          <article class="board-item"><div class="board-icon board-icon-blue">03</div><div class="board-item-copy"><div class="board-meta"><span>ПРАВИЛА ЛАГЕРЯ</span><span>ДЛЯ ПРИМЕРА</span></div><h3>Уважение — не дополнительная опция</h3><p>Играем вместе, не травим новичков и помним, что по ту сторону экрана живой человек.</p></div><span class="board-arrow" aria-hidden="true">↗</span></article>
+    <section class="arrival-section section-wrap" id="join" aria-labelledby="arrival-title">
+      <div class="arrival-card">
+        <div class="arrival-icon" aria-hidden="true"><span></span><i></i><b></b></div>
+        <div class="arrival-copy">
+          <p class="eyebrow">ВОРОТА ОТКРЫВАЮТСЯ СКОРО</p>
+          <h2 id="arrival-title">Место для тебя<br>уже <span>есть.</span></h2>
+          <p>Адрес сервера и приглашение в сообщество добавим сюда, когда всё будет готово.</p>
         </div>
-      </section>
+        <button class="button button-primary arrival-button" type="button" id="join-button">Как только будет готово <span aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+  </main>
 
-      <section class="join-section section-wrap" id="join">
-        <div class="join-card">
-          <div class="join-decoration decoration-one"></div><div class="join-decoration decoration-two"></div>
-          <div class="join-copy"><p class="eyebrow">ТВОЁ МЕСТО ЕЩЁ СВОБОДНО</p><h2>Давай оставим<br>место <span>у костра.</span></h2><p>Не обязательно знать кого-то заранее. Приходи познакомиться, предложи игру или просто посмотри, что здесь происходит.</p><div class="join-actions"><button type="button" class="button button-light" id="join-button">Присоединиться <span aria-hidden="true">↗</span></button><span class="join-small-note">Ссылка-приглашение добавляется владельцем сайта</span></div></div>
-          <div class="join-stamp" aria-hidden="true"><span>COME AS<br>YOU ARE</span><i>*</i><span>STAY AWHILE</span></div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer section-wrap">
-      <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="brand-name">лагерь<span class="brand-period">.</span></span></a>
-      <p>Сделано для совместных историй.</p>
-      <div class="footer-links"><a href="#about">О нас</a><a href="#events">События</a><a href="#top">Наверх ↑</a></div>
-      <span class="footer-year">DEMO CONCEPT · 2026</span>
-    </footer>
-  </div>
+  <footer class="site-footer section-wrap">
+    <a class="brand footer-brand" href="#" aria-label="Лагерь — на главную">
+      <span class="brand-icon" aria-hidden="true"><span class="brand-icon-top"></span><span class="brand-icon-front"></span><span class="brand-icon-side"></span></span>
+      <span class="brand-name">лагерь<span>.</span></span>
+    </a>
+    <p>Построено игроками. Для игроков.</p>
+    <span class="footer-note">MINECRAFT COMMUNITY · <span id="footer-year"></span></span>
+  </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
